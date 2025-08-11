@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { poppins } from "@/fonts/font-poppins";
 import "./globals.css";
 import TopNavbar from "./_sections/top-navbar";
+import Footer from "./_sections/footer";
 
 export const metadata: Metadata = {
   title: {
@@ -23,6 +24,7 @@ export default function RootLayout({
       >
         <TopNavbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

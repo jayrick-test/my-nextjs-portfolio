@@ -1,47 +1,106 @@
 "use client";
 
+import CountUpDownMotion from "@/components/count-up-down";
+import TitlePage from "@/components/page-title";
 import { DownloadIcon } from "@/components/svg/download-icon";
 import FacebookIcon from "@/components/svg/facebook-icon";
 import { LinkedInIcon } from "@/components/svg/linkedin-icon";
 import Typewriter from "@/components/typewriter";
+import Link from "next/link";
 
 export const Home = () => {
   return (
-    <section className="min-h-screen w-full px-10 py-5 flex items-center">
-      <div className="container mx-auto w-full">
-        <div className="flex items-center justify-between w-full">
-          <div className="max-w-2xl space-y-4">
-            <div className="space-y-2.5">
-              <h1 className="text-4xl font-bold">Hello,</h1>
-              <div className="text-green-300">
-                <span className="text-6xl font-medium">I am </span>
-                <Typewriter
-                  texts={["Jayrick", "Software Developer"]}
-                  typingSpeed={100}
-                  cursor="|"
-                  loop={true}
-                  deleteSpeed={50}
-                  pause={2000}
-                />
+    <>
+      <section className="min-h-screen w-full px-10 py-5 flex items-center">
+        <div className="container mx-auto w-full">
+          <div className="flex items-center justify-between w-full">
+            <div className="max-w-2xl space-y-4">
+              <div className="space-y-2.5">
+                <h1 className="text-4xl font-bold">Hello,</h1>
+                <div className="text-green-300">
+                  <span className="text-6xl font-medium">I am </span>
+                  <Typewriter
+                    texts={["Jayrick", "Software Developer"]}
+                    typingSpeed={100}
+                    cursor="|"
+                    loop={true}
+                    deleteSpeed={50}
+                    pause={2000}
+                  />
+                </div>
+
+                <p className="text-slate-500">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+                <button className="flex gap-1 font-medium text-lg w-auto text-green-300 border-2 border-green-300 rounded-full hover:bg-green-300 hover:text-white px-4 py-3 cursor-pointer transition-colors duration-200">
+                  <span>Download CV</span>
+                  <DownloadIcon width={24} height={24} />
+                </button>
               </div>
 
-              <p className="text-slate-500">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-              <button className="flex gap-1 font-medium text-lg w-auto text-green-300 border-2 border-green-300 rounded-full hover:bg-green-300 hover:text-white px-4 py-3 cursor-pointer transition-colors duration-200">
-                <span>Download CV</span>
-                <DownloadIcon width={24} height={24} />
-              </button>
-            </div>
-
-            <div className="flex flex-wrap gap-2.5">
-              <FacebookIcon width={32} height={32} className="cursor-pointer" />
-              <LinkedInIcon width={32} height={32} className="cursor-pointer" />
+              <div className="flex flex-wrap gap-2.5">
+                <FacebookIcon
+                  width={32}
+                  height={32}
+                  className="cursor-pointer"
+                />
+                <LinkedInIcon
+                  width={32}
+                  height={32}
+                  className="cursor-pointer"
+                />
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+      <section className="w-full p-10 flex items-center bg-green-300">
+        <div className="container mx-auto w-full">
+          <div className="flex items-center justify-center gap-4">
+            <CountUpDownMotion
+              end={2}
+              duration={3}
+              title={<>Years of Experience</>}
+              suffix="+"
+            />
+            <CountUpDownMotion end={12} title={<>Tech Stacks</>} suffix="+" />
+          </div>
+        </div>
+      </section>
+      <section className="w-full p-10 flex items-center">
+        <div className="container mx-auto w-full">
+          <div className="space-y-8">
+            <div className="space-y-4">
+              <div className="relative block py-12">
+                <TitlePage
+                  title={
+                    <span>
+                      About <span className="text-green-300">Me</span>
+                    </span>
+                  }
+                />
+              </div>
+              <p className="text-center text-slate-500">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            </div>
+
+            <Link
+              href="/about"
+              className="w-fit m-auto block font-medium text-lg text-green-300 border border-green-300 rounded-full hover:bg-green-400 hover:text-white px-4 py-3 cursor-pointer transition-colors duration-200"
+            >
+              Read More
+            </Link>
+          </div>
+        </div>
+      </section>
+    </>
   );
 };

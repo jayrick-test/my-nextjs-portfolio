@@ -1,7 +1,7 @@
 "use client";
 
-import { DetailsCard } from "@/components/details-card";
-import { PageTitle } from "@/components/page-title";
+import DetailsCard from "@/components/details-card";
+import TitlePage from "@/components/page-title";
 import { BriefCaseIcon } from "@/components/svg/briefcase-icon";
 import { CodeIcon } from "@/components/svg/code-icon";
 
@@ -27,13 +27,15 @@ export const About = () => {
       <div className="px-10 py-5">
         <div className="container mx-auto w-full space-y-8">
           <div className="space-y-4">
-            <PageTitle
-              title={
-                <span>
-                  About <span className="text-green-300">Me</span>
-                </span>
-              }
-            />
+            <div className="relative block py-48">
+              <TitlePage
+                title={
+                  <span>
+                    About <span className="text-green-300">Me</span>
+                  </span>
+                }
+              />
+            </div>
             <p className="text-center text-slate-500">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut

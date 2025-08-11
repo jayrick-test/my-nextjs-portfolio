@@ -1,61 +1,103 @@
 "use client";
 
+import { AnimatePresence, motion } from "motion/react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useCallback } from "react";
+import { useCallback, useState } from "react";
+
+const TOP_NAV_LINKS = [
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About" },
+  { href: "/contact", label: "Contact" },
+];
 
 const TopNavbar = () => {
   const pathname = usePathname();
+  const [isOpen, setIsOpen] = useState(false);
 
   const isActive = useCallback((href: string) => pathname === href, [pathname]);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 w-full">
+    <header className="fixed top-0 left-0 right-0 z-50 w-full bg-white">
       <div className="shadow-lg py-12 px-10">
         <div className="container mx-auto flex items-center justify-between">
-          <nav className="flex items-center justify-center gap-4">
-            <Link
-              href="/"
-              className={`inline-block hover:text-green-300 hover:border-b hover:border-green-300 transition-all duration-75 ease-in-out ${
-                isActive("/")
-                  ? "text-green-300 border-b border-green-300"
-                  : "text-slate-500"
-              }`}
-            >
-              Home
-            </Link>
-            <Link
-              href="/about"
-              className={`inline-block hover:text-green-300 hover:border-b hover:border-green-300 transition-all duration-75 ease-in-out ${
-                isActive("/about")
-                  ? "text-green-300 border-b border-green-300"
-                  : "text-slate-500"
-              }`}
-            >
-              About
-            </Link>
-            <Link
-              href="/contact"
-              className={`inline-block hover:text-green-300 hover:border-b hover:border-green-300 transition-all duration-75 ease-in-out ${
-                isActive("/contact")
-                  ? "text-green-300 border-b border-green-300"
-                  : "text-slate-500"
-              }`}
-            >
-              Contact
-            </Link>
+          <nav className="hidden md:flex items-center gap-6">
+            {TOP_NAV_LINKS.map((link) => (
+              <Link
+                key={`desktop-top-nav-links-${link.href}`}
+                href={link.href}
+                className={`hover:text-green-300 hover:border-b hover:border-green-300 transition-all duration-75 ease-in-out ${
+                  isActive(link.href)
+                    ? "text-green-300 border-b border-green-300"
+                    : "text-slate-500"
+                }`}
+              >
+                {link.label}
+              </Link>
+            ))}
           </nav>
           <Link href="/" className="inline-block text-3xl font-bold">
             <span>Jay</span>
             <span className="text-green-300">rick</span>
             <span className="text-blue-400">.</span>
           </Link>
-          <div>
+          <div className="hidden md:block">
             <button className="bg-green-300 text-white rounded p-2 hover:bg-green-400 cursor-pointer transition-colors duration-200">
               Download CV
             </button>
           </div>
+
+          <button
+            className="md:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1"
+            onClick={() => setIsOpen((prev) => !prev)}
+          >
+            <span
+              className={`block h-0.5 w-6 bg-slate-700 transition-transform ${
+                isOpen ? "rotate-45 translate-y-1.5" : ""
+              }`}
+            />
+            <span
+              className={`block h-0.5 w-6 bg-slate-700 transition-opacity ${
+                isOpen ? "opacity-0" : ""
+              }`}
+            />
+            <span
+              className={`block h-0.5 w-6 bg-slate-700 transition-transform ${
+                isOpen ? "-rotate-45 -translate-y-1.5" : ""
+              }`}
+            />
+          </button>
         </div>
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: "auto", opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="md:hidden overflow-hidden pt-4"
+            >
+              <div className="flex flex-col gap-4 mt-4">
+                {TOP_NAV_LINKS.map((link) => (
+                  <Link
+                    key={`mobile-top-nav-links-${link.href}`}
+                    href={link.href}
+                    onClick={() => setIsOpen(false)}
+                    className={`hover:text-green-300 transition-all py-4 ${
+                      isActive(link.href) ? "text-green-300" : "text-slate-500"
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+
+                <button className="bg-green-300 text-white rounded p-2 hover:bg-green-400 transition-colors duration-200">
+                  Download CV
+                </button>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </header>
   );

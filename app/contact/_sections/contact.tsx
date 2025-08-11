@@ -1,6 +1,6 @@
 "use client";
 
-import { PageTitle } from "@/components/page-title";
+import TitlePage from "@/components/page-title";
 
 export const Contact = () => {
   return (
@@ -8,7 +8,7 @@ export const Contact = () => {
       <div className="px-10 py-5">
         <div className="container mx-auto w-full space-y-8">
           <div className="space-y-4">
-            <PageTitle
+            <TitlePage
               title={
                 <span>
                   Contact <span className="text-green-300">Me</span>
