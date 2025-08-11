@@ -25,13 +25,23 @@ const TopNavbar = () => {
           </Link>
           <Link
             href="/about"
-            className={`inline-block text-slate-500 hover:text-green-300 hover:border-b hover:border-green-300 transition-all duration-75 ease-in-out ${
+            className={`inline-block hover:text-green-300 hover:border-b hover:border-green-300 transition-all duration-75 ease-in-out ${
               isActive("/about")
                 ? "text-green-300 border-b border-green-300"
                 : "text-slate-500"
             }`}
           >
             About
+          </Link>
+          <Link
+            href="/contact"
+            className={`inline-block hover:text-green-300 hover:border-b hover:border-green-300 transition-all duration-75 ease-in-out ${
+              isActive("/contact")
+                ? "text-green-300 border-b border-green-300"
+                : "text-slate-500"
+            }`}
+          >
+            Contact
           </Link>
         </nav>
         <Link href="/" className="inline-block text-3xl font-bold">
