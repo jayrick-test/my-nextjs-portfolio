@@ -1,6 +1,7 @@
 "use client";
 
 import { DetailsCard } from "@/components/details-card";
+import { PageTitle } from "@/components/page-title";
 import { BriefCaseIcon } from "@/components/svg/briefcase-icon";
 import { CodeIcon } from "@/components/svg/code-icon";
 
@@ -10,10 +11,10 @@ const TECH_STACKS = [
   "JavaScript",
   "React",
   "TypeScript",
-  "NodeJS",
   "NextJS",
   "NestJS",
   "Prisma",
+  "NodeJS",
   "MySQL",
   "PostgreSQL",
   "php",
@@ -26,10 +27,14 @@ export const About = () => {
       <div className="px-10 py-5">
         <div className="container mx-auto w-full space-y-8">
           <div className="space-y-4">
-            <h1 className="font-medium text-6xl text-center">
-              About <span className="text-green-300">Me</span>
-            </h1>
-            <p className="text-center">
+            <PageTitle
+              title={
+                <span>
+                  About <span className="text-green-300">Me</span>
+                </span>
+              }
+            />
+            <p className="text-center text-slate-500">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris

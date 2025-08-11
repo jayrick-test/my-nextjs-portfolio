@@ -1,3 +1,5 @@
+import { Contact } from "./_sections/contact";
+
 export default function Page() {
-  return <div>This is the contact page</div>;
+  return <Contact />;
 }

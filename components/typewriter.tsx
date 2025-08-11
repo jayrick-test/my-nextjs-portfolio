@@ -100,7 +100,7 @@ const Typewriter: React.FC<TypewriterProps> = ({
       animate="show"
       aria-live="polite"
     >
-      <span className="text-green-300">
+      <span>
         {display}
         <motion.span
           aria-hidden="true"

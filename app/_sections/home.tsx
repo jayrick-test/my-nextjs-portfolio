@@ -3,7 +3,7 @@
 import { DownloadIcon } from "@/components/svg/download-icon";
 import FacebookIcon from "@/components/svg/facebook-icon";
 import { LinkedInIcon } from "@/components/svg/linkedin-icon";
-import Typewriter from "@/components/TypewriterText";
+import Typewriter from "@/components/typewriter";
 
 export const Home = () => {
   return (
@@ -11,17 +11,21 @@ export const Home = () => {
       <div className="container mx-auto w-full">
         <div className="flex items-center justify-between w-full">
           <div className="max-w-2xl space-y-4">
-            <div className="space-y-1">
-              <h1 className="text-4xl font-bold">Hello, I am</h1>
-              <Typewriter
-                texts={["Jayrick", "Software Developer"]}
-                typingSpeed={100}
-                cursor="|"
-                loop={true}
-                deleteSpeed={50}
-                pause={2000}
-              />
-              <p>
+            <div className="space-y-2.5">
+              <h1 className="text-4xl font-bold">Hello,</h1>
+              <div className="text-green-300">
+                <span className="text-6xl font-medium">I am </span>
+                <Typewriter
+                  texts={["Jayrick", "Software Developer"]}
+                  typingSpeed={100}
+                  cursor="|"
+                  loop={true}
+                  deleteSpeed={50}
+                  pause={2000}
+                />
+              </div>
+
+              <p className="text-slate-500">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </p>
