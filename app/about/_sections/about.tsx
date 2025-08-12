@@ -30,9 +30,9 @@ export const About = () => {
             <div className="relative block py-48">
               <TitlePage
                 title={
-                  <span>
+                  <div className="xs:max-w-fit max-w-64 mx-auto">
                     About <span className="text-green-300">Me</span>
-                  </span>
+                  </div>
                 }
               />
             </div>

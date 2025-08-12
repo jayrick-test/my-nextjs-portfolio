@@ -75,9 +75,9 @@ export const Home = () => {
               <div className="relative block py-12">
                 <TitlePage
                   title={
-                    <span>
+                    <div className="xs:max-w-fit max-w-64 mx-auto">
                       About <span className="text-green-300">Me</span>
-                    </span>
+                    </div>
                   }
                 />
               </div>
@@ -97,6 +97,39 @@ export const Home = () => {
               className="w-fit m-auto block font-medium text-lg text-green-300 border border-green-300 rounded-full hover:bg-green-400 hover:text-white px-4 py-3 cursor-pointer transition-colors duration-200"
             >
               Read More
+            </Link>
+          </div>
+        </div>
+      </section>
+      <section className="w-full p-10 flex items-center">
+        <div className="container mx-auto w-full">
+          <div className="space-y-8">
+            <div className="space-y-4">
+              <div className="relative block py-12">
+                <TitlePage
+                  title={
+                    <div className="xs:max-w-fit max-w-64 mx-auto">
+                      Contact <span className="text-green-300">Me</span>
+                    </div>
+                  }
+                />
+              </div>
+              <p className="text-center text-slate-500">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            </div>
+
+            <Link
+              href="/contact"
+              className="w-fit m-auto block font-medium text-lg text-green-300 border border-green-300 rounded-full hover:bg-green-400 hover:text-white px-4 py-3 cursor-pointer transition-colors duration-200"
+            >
+              Click Here
             </Link>
           </div>
         </div>
