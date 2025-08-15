@@ -4,9 +4,31 @@ import TitlePage from "@/components/page-title";
 import { useCallback } from "react";
 
 export const Contact = () => {
-  const onFormSubmit = useCallback((e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-  }, []);
+  const onFormSubmit = useCallback(
+    async (e: React.FormEvent<HTMLFormElement>) => {
+      e.preventDefault();
+
+      const formData = new FormData(e.target as HTMLFormElement);
+
+      const contactRequestPayload = Object.fromEntries(formData.entries());
+
+      try {
+        const result = await fetch(`/api/contact`, {
+          method: "POST",
+          body: JSON.stringify(contactRequestPayload),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
+
+        if (result.status === 200) {
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    },
+    []
+  );
 
   return (
     <section className="min-h-screen w-full pt-[calc(100%-(100%-160px))]">
@@ -28,15 +50,18 @@ export const Contact = () => {
             <div className="space-y-4">
               <input
                 placeholder="Full Name"
+                name="fullname"
                 className="border border-slate-300 p-3 rounded-lg w-full block focus:outline-none focus:border-green-300 transition-colors duration-200"
               />
               <input
                 type="email"
                 placeholder="Email Address"
+                name="email"
                 className="border border-slate-300 p-3 rounded-lg w-full block focus:outline-none focus:border-green-300 transition-colors duration-200"
               />
               <textarea
                 placeholder="Message"
+                name="message"
                 className="border border-slate-300 p-3 rounded-lg resize-none w-full block focus:outline-none focus:border-green-300 transition-colors duration-200"
                 rows={8}
               />
