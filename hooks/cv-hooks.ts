@@ -1,15 +1,13 @@
 import { useMemo } from "react";
 
 export const useCV = () => {
-  const myCVPath = useMemo(
-    () =>
-      `${
-        typeof window === "undefined"
-          ? process.env.LOCAL_BASE_DOMAIN_URL
-          : window.location.origin
-      }/cv/cv.pdf`,
-    []
-  );
+  const myCVPath = useMemo(() => {
+    let cvPath = "http://localhost:3000";
+
+    if (typeof window !== "undefined") cvPath = window.location.origin;
+
+    return `${cvPath}/cv/cv.pdf`;
+  }, []);
 
   return myCVPath;
 };
