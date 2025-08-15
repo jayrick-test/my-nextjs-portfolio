@@ -1,5 +1,6 @@
 "use client";
 
+import { useCV } from "@/hooks/cv-hooks";
 import { AnimatePresence, motion } from "motion/react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -14,6 +15,7 @@ const TOP_NAV_LINKS = [
 const TopNavbar = () => {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
+  const myCVPath = useCV();
 
   const isActive = useCallback((href: string) => pathname === href, [pathname]);
 
@@ -42,9 +44,13 @@ const TopNavbar = () => {
             <span className="text-blue-400">.</span>
           </Link>
           <div className="hidden md:block">
-            <button className="bg-green-300 text-white rounded p-2 hover:bg-green-400 cursor-pointer transition-colors duration-200">
+            <Link
+              className="bg-green-300 text-white rounded p-2 hover:bg-green-400 transition-colors duration-200"
+              download={`mycv.pdf`}
+              href={myCVPath}
+            >
               Download CV
-            </button>
+            </Link>
           </div>
 
           <button
@@ -91,9 +97,13 @@ const TopNavbar = () => {
                   </Link>
                 ))}
 
-                <button className="bg-green-300 text-white rounded p-2 hover:bg-green-400 transition-colors duration-200">
+                <Link
+                  className="bg-green-300 text-white rounded p-2 hover:bg-green-400 transition-colors duration-200"
+                  download={`mycv.pdf`}
+                  href={myCVPath}
+                >
                   Download CV
-                </button>
+                </Link>
               </div>
             </motion.div>
           )}

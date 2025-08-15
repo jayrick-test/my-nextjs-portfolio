@@ -6,9 +6,12 @@ import { DownloadIcon } from "@/components/svg/download-icon";
 import FacebookIcon from "@/components/svg/facebook-icon";
 import { LinkedInIcon } from "@/components/svg/linkedin-icon";
 import Typewriter from "@/components/typewriter";
+import { useCV } from "@/hooks/cv-hooks";
 import Link from "next/link";
 
 export const Home = () => {
+  const myCVPath = useCV();
+
   return (
     <>
       <section className="min-h-screen w-full px-10 py-5 flex items-center">
@@ -33,10 +36,14 @@ export const Home = () => {
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
-                <button className="flex gap-1 font-medium text-lg w-auto text-green-300 border-2 border-green-300 rounded-full hover:bg-green-300 hover:text-white px-4 py-3 cursor-pointer transition-colors duration-200">
+                <Link
+                  download={`mycv.pdf`}
+                  href={myCVPath}
+                  className="inline-flex gap-1 font-medium text-lg w-auto text-green-300 border-2 border-green-300 rounded-full hover:bg-green-300 hover:text-white px-4 py-3 cursor-pointer transition-colors duration-200"
+                >
                   <span>Download CV</span>
                   <DownloadIcon width={24} height={24} />
-                </button>
+                </Link>
               </div>
 
               <div className="flex flex-wrap gap-2.5">
