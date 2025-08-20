@@ -1,11 +1,11 @@
 import type { SVGProps } from "react";
 
-export function DownloadIcon(props: SVGProps<SVGSVGElement>) {
+export default function EnvelopeIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="1em"
-      height="1em"
+      width={24}
+      height={24}
       viewBox="0 0 24 24"
       {...props}
     >
@@ -16,8 +16,8 @@ export function DownloadIcon(props: SVGProps<SVGSVGElement>) {
         strokeLinejoin="round"
         strokeWidth={2}
       >
-        <path d="M12 15V3m9 12v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-        <path d="m7 10l5 5l5-5" />
+        <path d="m22 7l-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
+        <rect width={20} height={16} x={2} y={4} rx={2} />
       </g>
     </svg>
   );

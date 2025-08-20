@@ -54,7 +54,7 @@ const TopNavbar = () => {
           </div>
 
           <button
-            className="md:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1"
+            className="md:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1 cursor-pointer"
             onClick={() => setIsOpen((prev) => !prev)}
           >
             <span

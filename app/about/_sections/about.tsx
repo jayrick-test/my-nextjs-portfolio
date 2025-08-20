@@ -5,6 +5,10 @@ import TitlePage from "@/components/page-title";
 import { SkillsCard } from "@/components/skills-card";
 import { BriefCaseIcon } from "@/components/svg/briefcase-icon";
 import { CodeIcon } from "@/components/svg/code-icon";
+import { OpenAiIcon } from "@/components/svg/openai-icon";
+import { PostmanIcon } from "@/components/svg/postman-icon";
+import { VSCodeIcon } from "@/components/svg/vscode-icon";
+import { ToolsInfo } from "@/components/tools-info";
 
 const TECH_TOOLS = ["VSCode", "Postman", "Prisma Studio"];
 
@@ -67,7 +71,7 @@ export const About = () => {
           <div className="xs:max-w-fit max-w-64 mx-auto text-4xl font-bold">
             My <span className="text-green-300">Skills</span>
           </div>
-          <div className="max-w-3xl mx-auto w-full flex flex-wrap gap-4 items-center justify-between">
+          <div className="max-w-4xl mx-auto w-full flex flex-wrap gap-4 items-center justify-center">
             <div className="w-full flex-[0_1_calc(33%-16px)]">
               <SkillsCard skill="HTML" value={90} />
             </div>
@@ -98,6 +102,27 @@ export const About = () => {
             <div className="w-full flex-[0_1_calc(33%-16px)]">
               <SkillsCard skill="Prisma" value={80} />
             </div>
+          </div>
+        </div>
+      </section>
+      <section className="w-full p-10 flex items-center">
+        <div className="container mx-auto w-full space-y-8">
+          <div className="xs:max-w-fit max-w-64 mx-auto text-4xl font-bold">
+            My <span className="text-green-300">Tools</span>
+          </div>
+          <div className="max-w-4xl mx-auto w-full flex flex-wrap gap-4 items-center justify-center">
+            <ToolsInfo
+              label="Visual Studio Code"
+              icon={<VSCodeIcon width={32} height={32} />}
+            />
+            <ToolsInfo
+              label="Postman"
+              icon={<PostmanIcon width={32} height={32} />}
+            />
+            <ToolsInfo
+              label="Open AI"
+              icon={<OpenAiIcon width={32} height={32} />}
+            />
           </div>
         </div>
       </section>

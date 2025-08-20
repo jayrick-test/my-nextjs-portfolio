@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import React, { useState } from "react";
+import { useState } from "react";
 
 const names = ["Alice", "Bob", "Charlie", "Diana", "Ethan", "Fiona", "George"];
 const itemHeight = 48;
