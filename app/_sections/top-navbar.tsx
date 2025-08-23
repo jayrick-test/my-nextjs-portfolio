@@ -9,6 +9,7 @@ import { useCallback, useState } from "react";
 const TOP_NAV_LINKS = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
+  { href: "/projects", label: "My Projects" },
   { href: "/contact", label: "Contact" },
 ];
 

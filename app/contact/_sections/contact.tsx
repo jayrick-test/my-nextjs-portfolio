@@ -40,7 +40,7 @@ export const Contact = () => {
     <section className="min-h-screen w-full pt-[calc(100%-(100%-160px))]">
       <div className="px-10 py-5">
         <div className="container mx-auto w-full space-y-12">
-          <div className="space-y-4">
+          <div className="space-y-4 bg-white">
             <TitlePage
               title={
                 <div className="xs:max-w-fit max-w-64 mx-auto">

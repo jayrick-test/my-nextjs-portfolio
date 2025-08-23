@@ -79,7 +79,7 @@ export const Home = () => {
         <div className="container mx-auto w-full">
           <div className="space-y-8">
             <div className="space-y-4">
-              <div className="relative block py-12">
+              <div className="relative block py-12 bg-white">
                 <TitlePage
                   title={
                     <div className="xs:max-w-fit max-w-64 mx-auto">
@@ -89,16 +89,10 @@ export const Home = () => {
                 />
               </div>
               <p className="text-center text-slate-500">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
+                I am a passionate creator who loves building and learning. Here
+                is a little more about me.
               </p>
             </div>
-
             <Link
               href="/about"
               className="w-fit m-auto block font-medium text-lg text-green-300 border border-green-300 rounded-full hover:bg-green-400 hover:text-white px-4 py-3 cursor-pointer transition-colors duration-200"
@@ -108,11 +102,38 @@ export const Home = () => {
           </div>
         </div>
       </section>
+      <section className="w-full p-10 flex items-center bg-green-400">
+        <div className="container mx-auto w-full">
+          <div className="space-y-8">
+            <div className="space-y-4">
+              <div className="relative block py-12 bg-green-400">
+                <TitlePage
+                  title={
+                    <div className="xs:max-w-fit max-w-64 mx-auto ">
+                      My <span className="text-green-300">Projects</span>
+                    </div>
+                  }
+                />
+              </div>
+              <p className="text-center text-slate-500">
+                Here are some of the projects I have worked on. Take a look!
+              </p>
+            </div>
+
+            <Link
+              href="/projects"
+              className="w-fit m-auto block font-medium text-lg text-green-300 border border-green-300 rounded-full hover:bg-green-400 hover:text-white px-4 py-3 cursor-pointer transition-colors duration-200"
+            >
+              Click Here
+            </Link>
+          </div>
+        </div>
+      </section>
       <section className="w-full p-10 flex items-center">
         <div className="container mx-auto w-full">
           <div className="space-y-8">
             <div className="space-y-4">
-              <div className="relative block py-12">
+              <div className="relative block py-12 bg-white">
                 <TitlePage
                   title={
                     <div className="xs:max-w-fit max-w-64 mx-auto">
@@ -122,13 +143,7 @@ export const Home = () => {
                 />
               </div>
               <p className="text-center text-slate-500">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
+                Got a question or just want to say hi? Feel free to reach out!
               </p>
             </div>
 
