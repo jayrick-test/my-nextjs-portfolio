@@ -122,7 +122,7 @@ export const Home = () => {
 
             <Link
               href="/projects"
-              className="w-fit m-auto block font-medium text-lg text-green-300 border border-green-300 rounded-full hover:bg-green-400 hover:text-white px-4 py-3 cursor-pointer transition-colors duration-200"
+              className="w-fit m-auto block font-medium bg-white text-lg text-green-300 border border-green-300 hover:border-white rounded-full hover:bg-green-400 hover:text-white px-4 py-3 cursor-pointer transition-colors duration-200"
             >
               Click Here
             </Link>
