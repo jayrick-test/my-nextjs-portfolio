@@ -110,7 +110,7 @@ export const Home = () => {
                 <TitlePage
                   title={
                     <div className="xs:max-w-fit max-w-64 mx-auto ">
-                      My <span className="text-green-300">Projects</span>
+                      My <span className="text-white">Projects</span>
                     </div>
                   }
                 />
