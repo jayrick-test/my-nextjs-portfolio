@@ -1,6 +1,7 @@
 "use client";
 
 import CountUpDownMotion from "@/components/count-up-down";
+import MiniProjectCard from "@/components/mini-project-card";
 import TitlePage from "@/components/page-title";
 import { DownloadIcon } from "@/components/svg/download-icon";
 import FacebookIcon from "@/components/svg/facebook-icon";
@@ -95,7 +96,7 @@ export const Home = () => {
             </div>
             <Link
               href="/about"
-              className="w-fit m-auto block font-medium text-lg text-green-300 border border-green-300 rounded-full hover:bg-green-400 hover:text-white px-4 py-3 cursor-pointer transition-colors duration-200"
+              className="text-center w-fit m-auto block font-medium text-lg text-green-300 border border-green-300 rounded-full hover:bg-green-400 hover:text-white px-4 py-3 cursor-pointer transition-colors duration-200"
             >
               Read More
             </Link>
@@ -103,7 +104,7 @@ export const Home = () => {
         </div>
       </section>
       <section className="w-full p-10 flex items-center bg-green-400">
-        <div className="container mx-auto w-full">
+        <div className="max-w-4xl mx-auto w-full">
           <div className="space-y-8">
             <div className="space-y-4">
               <div className="relative block py-12 bg-green-400">
@@ -115,16 +116,30 @@ export const Home = () => {
                   }
                 />
               </div>
-              <p className="text-center text-slate-500">
+              <p className="text-center text-white">
                 Here are some of the projects I have worked on. Take a look!
               </p>
             </div>
-
+            <div className="flex gap-4 flex-wrap">
+              <MiniProjectCard
+                title="eduTing"
+                description="Smart School Finder and Community, and Career Path
+                      Discovery App"
+                alt="eduting-img-project-card"
+                src="/eduting-img-assets/img1.png"
+              />
+              <MiniProjectCard
+                title="JoinBitte"
+                description="Digitalized Restaurant-Branded and Ordering App"
+                alt="joinbitte-img-project-card"
+                src="/joinbitte-img-assets/img1.png"
+              />
+            </div>
             <Link
               href="/projects"
-              className="w-fit m-auto block font-medium bg-white text-lg text-green-300 border border-green-300 hover:border-white rounded-full hover:bg-green-400 hover:text-white px-4 py-3 cursor-pointer transition-colors duration-200"
+              className="text-center w-fit m-auto block font-medium bg-white text-lg text-green-300 border border-green-300 hover:border-white rounded-full hover:bg-green-400 hover:text-white px-4 py-3 cursor-pointer transition-colors duration-200"
             >
-              Click Here
+              See All Projects
             </Link>
           </div>
         </div>
@@ -149,9 +164,9 @@ export const Home = () => {
 
             <Link
               href="/contact"
-              className="w-fit m-auto block font-medium text-lg text-green-300 border border-green-300 rounded-full hover:bg-green-400 hover:text-white px-4 py-3 cursor-pointer transition-colors duration-200"
+              className="text-center w-fit m-auto block font-medium text-lg text-green-300 border border-green-300 rounded-full hover:bg-green-400 hover:text-white px-4 py-3 cursor-pointer transition-colors duration-200"
             >
-              Click Here
+              Press Me Here
             </Link>
           </div>
         </div>

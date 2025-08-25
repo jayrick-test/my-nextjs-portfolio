@@ -9,7 +9,7 @@ const TitlePage: React.FC<PageTitle> = ({ title }) => {
       <span className="absolute top-1/2 left-0 w-full h-0.5 bg-slate-300 transform -translate-y-1/2 z-0" />
 
       {/* Title container */}
-      <div className="relative mx-auto w-fit px-6 py-2 font-medium text-6xl text-center z-10 bg-inherit">
+      <div className="relative mx-auto w-fit px-6 py-2 font-medium text-[clamp(2rem,5vw,3.5rem)] text-center z-10 bg-inherit">
         {title}
       </div>
     </div>
