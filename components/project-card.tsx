@@ -17,7 +17,7 @@ const ProjectCard: React.FC<ProjectCardTypes> = ({
 }) => {
   return (
     <div className="w-full rounded-xl overflow-hidden shadow-xl">
-      <div className="min-h-80 relative w-full h-auto border-b-4 border-b-slate-300 ">
+      <div className="min-h-80 relative w-full h-auto border-b-4 border-b-slate-300">
         <Image
           src={src}
           alt={alt}
