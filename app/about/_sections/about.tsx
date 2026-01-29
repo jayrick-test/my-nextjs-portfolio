@@ -66,12 +66,12 @@ export const About = () => {
           </div>
         </div>
       </section>
-      <section className="w-full p-10 flex items-center">
+      <section className="w-full p-10 flex flex-col gap-4 items-center">
         <div className="container mx-auto w-full space-y-8">
           <div className="xs:max-w-fit max-w-64 mx-auto text-4xl font-bold">
             My <span className="text-green-300">Skills</span>
           </div>
-          <div className="max-w-4xl mx-auto w-full flex flex-wrap gap-4 items-center justify-center">
+          <div className="max-w-7xl mx-auto w-full flex flex-wrap gap-4 items-center justify-center">
             <div className="w-full flex-[0_1_calc(33%-16px)]">
               <SkillsCard skill="HTML" value={90} />
             </div>
@@ -91,6 +91,16 @@ export const About = () => {
               <SkillsCard skill="NodeJS" value={70} />
             </div>
             <div className="w-full flex-[0_1_calc(33%-16px)]">
+              <SkillsCard skill="php" value={75} />
+            </div>
+          </div>
+        </div>
+        <div className="container mx-auto w-full space-y-8">
+          <div className="xs:max-w-fit max-w-64 mx-auto text-4xl font-bold">
+            <span className="text-green-300">Frameworks</span>
+          </div>
+          <div className="max-w-7xl mx-auto w-full flex flex-wrap gap-4 items-center justify-center">
+            <div className="w-full flex-[0_1_calc(33%-16px)]">
               <SkillsCard skill="TailwindCSS" value={80} />
             </div>
             <div className="w-full flex-[0_1_calc(33%-16px)]">
@@ -101,6 +111,15 @@ export const About = () => {
             </div>
             <div className="w-full flex-[0_1_calc(33%-16px)]">
               <SkillsCard skill="Prisma" value={80} />
+            </div>
+            <div className="w-full flex-[0_1_calc(33%-16px)]">
+              <SkillsCard skill="Laravel" value={75} />
+            </div>
+            <div className="w-full flex-[0_1_calc(33%-16px)]">
+              <SkillsCard skill="VueJS" value={75} />
+            </div>
+            <div className="w-full flex-[0_1_calc(33%-16px)]">
+              <SkillsCard skill="NuxtJS" value={70} />
             </div>
           </div>
         </div>

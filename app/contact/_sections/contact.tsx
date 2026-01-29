@@ -36,7 +36,7 @@ export const Contact = () => {
     []
   );
 
-  return (
+  return (  
     <section className="min-h-screen w-full pt-[calc(100%-(100%-160px))]">
       <div className="px-10 py-5">
         <div className="container mx-auto w-full space-y-12">

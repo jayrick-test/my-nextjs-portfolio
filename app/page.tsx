@@ -3,7 +3,7 @@ import { Home } from "./_sections/home";
 
 export const metadata: Metadata = {
   title: "Simple Portfolio | Home",
-  description: "Simple Portfolio home page",
+  description: "Jayrick Gacayan, software developer",
 };
 
 export default function Page() {

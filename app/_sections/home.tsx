@@ -14,7 +14,7 @@ export const Home = () => {
   const myCVPath = useCV();
 
   return (
-    <>
+    <main>
       <section className="min-h-screen w-full px-10 py-5 flex items-center">
         <div className="container mx-auto w-full">
           <div className="flex items-center justify-between w-full">
@@ -24,7 +24,12 @@ export const Home = () => {
                 <div className="text-green-300">
                   <span className="text-6xl font-medium">I am </span>
                   <Typewriter
-                    texts={["Jayrick", "Software Developer"]}
+                    texts={[
+                      "Jayrick",
+                      "software developer",
+                      "front-end web developer",
+                      "back-end web developer",
+                    ]}
                     typingSpeed={100}
                     cursor="|"
                     loop={true}
@@ -33,9 +38,9 @@ export const Home = () => {
                   />
                 </div>
 
-                <p className="text-slate-500">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                <p className="text-slate-400">
+                  Strives to Learn, Motivated to Grow Professionally, and Values
+                  Feedback.
                 </p>
                 <Link
                   download={`mycv.pdf`}
@@ -90,8 +95,8 @@ export const Home = () => {
                 />
               </div>
               <p className="text-center text-slate-500">
-                I am a passionate creator who loves building and learning. Here
-                is a little more about me.
+                I am a passionate developer who loves building and learning.
+                Here is a little more about me.
               </p>
             </div>
             <Link
@@ -171,6 +176,6 @@ export const Home = () => {
           </div>
         </div>
       </section>
-    </>
+    </main>
   );
 };

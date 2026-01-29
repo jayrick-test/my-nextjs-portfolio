@@ -22,6 +22,7 @@ const MiniProjectCard: React.FC<MiniProjectCardProps> = ({
           sizes="100vw"
           quality={100}
           className="block object-cover w-full h-auto object-top-left aspect-square"
+          priority
         />
       </div>
       <div className="absolute bottom-0 h-full w-full opacity-0 group-hover:cursor-pointer group-hover:opacity-100 transition-opacity duration-300 bg-black/30 z-10 flex items-end justify-center">

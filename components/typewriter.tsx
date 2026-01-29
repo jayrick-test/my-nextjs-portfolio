@@ -24,15 +24,15 @@ const Typewriter: React.FC<TypewriterProps> = ({
   loop = true,
   cursor = "|",
 }) => {
+  const textArray = useMemo(
+    () => (Array.isArray(texts) ? texts : [texts]),
+    [texts],
+  );
+
   const [index, setIndex] = useState(0);
   const [display, setDisplay] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
   const mounted = useRef(true);
-
-  const textArray = useMemo(
-    () => (Array.isArray(texts) ? texts : [texts]),
-    [texts]
-  );
 
   useEffect(() => {
     mounted.current = true;
@@ -100,17 +100,15 @@ const Typewriter: React.FC<TypewriterProps> = ({
       animate="show"
       aria-live="polite"
     >
-      <span>
-        {display}
-        <motion.span
-          aria-hidden="true"
-          style={{ display: "inline-block", width: "0.6ch" }}
-          animate={{ opacity: [0, 1, 0] }}
-          transition={{ repeat: Infinity, duration: 1.1, ease: "linear" }}
-        >
-          {cursor}
-        </motion.span>
-      </span>
+      {display}
+      <motion.span
+        aria-hidden
+        style={{ display: "inline-block", width: "0.6ch" }}
+        animate={{ opacity: [0, 1, 0] }}
+        transition={{ repeat: Infinity, duration: 1.1 }}
+      >
+        {cursor}
+      </motion.span>
     </motion.div>
   );
 };

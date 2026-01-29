@@ -1,17 +1,24 @@
 "use client";
 
+import FacebookIcon from "@/components/svg/facebook-icon";
+import { LinkedInIcon } from "@/components/svg/linkedin-icon";
+
 const Footer = () => {
   return (
     <footer className="py-12 px-10 bg-gray-200 text-white">
-      <div className="container mx-auto w-full">
-        <div className="mx-auto w-auto block text-center">
+      <div className="container mx-auto w-full flex items-center justify-between">
+        <div className="block w-auto">
           &#169; {new Date().getFullYear()}{" "}
           <span className="inline-block font-bold ">
             <span className="text-black">Jay</span>
             <span className="text-green-300">rick</span>
             <span className="text-blue-400">.</span>
-          </span>{" "}
+          </span>
           All rights reserved.
+        </div>
+        <div className="flex flex-wrap gap-2.5 justify-end items-center w-auto">
+          <FacebookIcon width={32} height={32} className="cursor-pointer" />
+          <LinkedInIcon width={32} height={32} className="cursor-pointer" />
         </div>
       </div>
     </footer>
