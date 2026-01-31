@@ -33,10 +33,10 @@ export const Contact = () => {
         console.log(error);
       }
     },
-    []
+    [],
   );
 
-  return (  
+  return (
     <section className="min-h-screen w-full pt-[calc(100%-(100%-160px))]">
       <div className="px-10 py-5">
         <div className="container mx-auto w-full space-y-12">
@@ -51,33 +51,27 @@ export const Contact = () => {
           </div>
           <div className="flex gap-4 w-full">
             <div className="w-full space-y-8">
-              <div className="font-semibold text-3xl border-b border-b-slate-300 w-fit border-dashed">
+              <div className="font-semibold text-3xl border-b border-b-slate-400 w-fit border-dashed">
                 Get in <span className="text-green-300">Touch</span>
               </div>
               <div className="space-y-4">
                 <div className="flex items-center gap-4 font-medium">
-                  <EnvelopeIcon className="text-green-300 inline-block" />
-                  <div className="inline-block text-slate-300">
-                    jirk24cay0988@gmail.com
-                  </div>
+                  <EnvelopeIcon className="text-green-500 inline-block" />
+                  <span>jirk24cay0988@gmail.com</span>
                 </div>
                 <div className="flex items-center gap-4 font-medium">
-                  <PhoneIcon className="text-green-300 inline-block" />
-                  <div className="inline-block text-slate-300">
-                    +63 961 618 2438
-                  </div>
+                  <PhoneIcon className="text-green-500 inline-block" />
+                  <span>+63 961 618 2438</span>
                 </div>
                 <div className="flex items-center gap-4 font-medium">
-                  <PinMapIcon className="text-green-300 inline-block" />
-                  <div className="inline-block text-slate-300">
-                    Cebu City, Cebu, Philippines, 6000
-                  </div>
+                  <PinMapIcon className="text-green-500 inline-block" />
+                  <span>Cebu City, Cebu, Philippines, 6000</span>
                 </div>
               </div>
             </div>
             <form
               onSubmit={onFormSubmit}
-              className="space-y-8 w-full shadow-lg rounded-lg p-8 bg-slate-50/30"
+              className="space-y-8 w-full shadow-lg rounded-lg p-8 border border-slate-100"
             >
               <div className="space-y-4">
                 <input

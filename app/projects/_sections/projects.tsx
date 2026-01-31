@@ -18,7 +18,7 @@ const Projects: React.FC = () => {
                 }
               />
             </div>
-            <p className="text-center text-slate-500">
+            <p className="text-center">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -28,7 +28,7 @@ const Projects: React.FC = () => {
               sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
           </div>
-          <div className="space-y-8">
+          <div className="space-y-12">
             <ProjectCard
               title="eduTing"
               description="Smart School Finder and Community, and Career Path

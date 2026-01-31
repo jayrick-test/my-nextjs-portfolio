@@ -16,8 +16,8 @@ const ProjectCard: React.FC<ProjectCardTypes> = ({
   src,
 }) => {
   return (
-    <div className="w-full rounded-xl overflow-hidden shadow-xl">
-      <div className="min-h-80 relative w-full h-auto border-b-4 border-b-slate-300">
+    <div className="w-full rounded-xl overflow-hidden shadow-xl border border-slate-100">
+      <div className="min-h-80 relative w-full h-auto">
         <Image
           src={src}
           alt={alt}
@@ -28,10 +28,10 @@ const ProjectCard: React.FC<ProjectCardTypes> = ({
         />
       </div>
       <div className="p-4 space-y-4">
-        <h3 className="font-bold text-3xl">{title}</h3>
-        <p className="font-medium text-lg text-slate-700">{description}</p>
+        <h2 className="font-bold text-4xl">{title}</h2>
+        <p className="text-slate-00">{description}</p>
 
-        <ul className="list-disc list-inside space-y-1.5">
+        <ul className="list-disc space-y-1.5 px-8 py-4">
           {doings.map((doing, index) => (
             <li key={`${index}-${title}-project-card`}>{doing}</li>
           ))}

@@ -28,7 +28,7 @@ const CountUpDownMotion: React.FC<CountUpDownMotionProps> = ({
   const [displayValue, setDisplayValue] = useState(start.toFixed(decimals));
 
   const rounded = useTransform(motionValue, (latest) =>
-    latest.toFixed(decimals)
+    latest.toFixed(decimals),
   );
 
   useEffect(() => {
@@ -47,10 +47,9 @@ const CountUpDownMotion: React.FC<CountUpDownMotionProps> = ({
   }, [start, end, duration, autoStart, rounded, motionValue, onComplete]);
 
   return (
-    <div className="flex flex-col items-center gap-1">
+    <div className="flex flex-col items-center gap-2">
       <motion.span
-        className="font-bold text-4xl p-4
-        "
+        className="font-bold text-4xl p-4"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
       >
@@ -58,7 +57,7 @@ const CountUpDownMotion: React.FC<CountUpDownMotionProps> = ({
         {displayValue}
         {suffix}
       </motion.span>
-      <p className="text-slate-500">{title}</p>
+      <span className="text-white">{title}</span>
     </div>
   );
 };

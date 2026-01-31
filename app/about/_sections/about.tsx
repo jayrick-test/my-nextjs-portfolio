@@ -14,7 +14,7 @@ const TECH_TOOLS = ["VSCode", "Postman", "Prisma Studio"];
 
 export const About = () => {
   return (
-    <>
+    <main>
       <section className="w-full pt-[calc(100%-(100%-160px))]">
         <div className="px-10 py-5">
           <div className="container mx-auto w-full space-y-8">
@@ -23,12 +23,12 @@ export const About = () => {
                 <TitlePage
                   title={
                     <div className="xs:max-w-fit max-w-64 mx-auto">
-                      About <span className="text-green-300">Me</span>
+                      About <span className="text-green-500">Me</span>
                     </div>
                   }
                 />
               </div>
-              <p className="text-center text-slate-500">
+              <p className="text-center font-light">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -69,7 +69,7 @@ export const About = () => {
       <section className="w-full p-10 flex flex-col gap-4 items-center">
         <div className="container mx-auto w-full space-y-8">
           <div className="xs:max-w-fit max-w-64 mx-auto text-4xl font-bold">
-            My <span className="text-green-300">Skills</span>
+            My <span className="text-green-500">Skills</span>
           </div>
           <div className="max-w-7xl mx-auto w-full flex flex-wrap gap-4 items-center justify-center">
             <div className="w-full flex-[0_1_calc(33%-16px)]">
@@ -97,7 +97,7 @@ export const About = () => {
         </div>
         <div className="container mx-auto w-full space-y-8">
           <div className="xs:max-w-fit max-w-64 mx-auto text-4xl font-bold">
-            <span className="text-green-300">Frameworks</span>
+            <span className="text-green-500">Frameworks</span>
           </div>
           <div className="max-w-7xl mx-auto w-full flex flex-wrap gap-4 items-center justify-center">
             <div className="w-full flex-[0_1_calc(33%-16px)]">
@@ -127,7 +127,7 @@ export const About = () => {
       <section className="w-full p-10 flex items-center">
         <div className="container mx-auto w-full space-y-8">
           <div className="xs:max-w-fit max-w-64 mx-auto text-4xl font-bold">
-            My <span className="text-green-300">Tools</span>
+            My <span className="text-green-500">Tools</span>
           </div>
           <div className="max-w-4xl mx-auto w-full flex flex-wrap gap-4 items-center justify-center">
             <ToolsInfo
@@ -145,6 +145,6 @@ export const About = () => {
           </div>
         </div>
       </section>
-    </>
+    </main>
   );
 };

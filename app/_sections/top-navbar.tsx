@@ -41,12 +41,12 @@ const TopNavbar = () => {
           </nav>
           <Link href="/" className="inline-block text-3xl font-bold">
             <span>Jay</span>
-            <span className="text-green-300">rick</span>
-            <span className="text-blue-400">.</span>
+            <span className="text-green-500">rick</span>
+            <span className="text-blue-500">.</span>
           </Link>
           <div className="hidden md:block">
             <Link
-              className="bg-green-300 text-white rounded p-2 hover:bg-green-400 transition-colors duration-200"
+              className="bg-green-600 text-white rounded px-4 py-3 hover:bg-green-500 transition-colors duration-200"
               download={`mycv.pdf`}
               href={myCVPath}
             >
