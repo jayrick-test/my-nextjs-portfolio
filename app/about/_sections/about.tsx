@@ -3,10 +3,15 @@
 import DetailsCard from "@/components/details-card";
 import TitlePage from "@/components/page-title";
 import { SkillsCard } from "@/components/skills-card";
+import { AiIcon } from "@/components/svg/ai-icon";
 import { BriefCaseIcon } from "@/components/svg/briefcase-icon";
 import { CodeIcon } from "@/components/svg/code-icon";
+import { GitIcon } from "@/components/svg/git-icon";
+import { MySqlIcon } from "@/components/svg/mysql-icon";
 import { OpenAiIcon } from "@/components/svg/openai-icon";
+import { PostgreSqlIcon } from "@/components/svg/postgresql-icon";
 import { PostmanIcon } from "@/components/svg/postman-icon";
+import { SqliteIcon } from "@/components/svg/sqlite-icon";
 import { VSCodeIcon } from "@/components/svg/vscode-icon";
 import { ToolsInfo } from "@/components/tools-info";
 
@@ -79,6 +84,9 @@ export const About = () => {
               <SkillsCard skill="CSS" value={85} />
             </div>
             <div className="w-full flex-[0_1_calc(33%-16px)]">
+              <SkillsCard skill="SCSS" value={80} />
+            </div>
+            <div className="w-full flex-[0_1_calc(33%-16px)]">
               <SkillsCard skill="JavaScript" value={80} />
             </div>
             <div className="w-full flex-[0_1_calc(33%-16px)]">
@@ -134,13 +142,32 @@ export const About = () => {
               label="Visual Studio Code"
               icon={<VSCodeIcon width={32} height={32} />}
             />
+            <ToolsInfo label="GIT" icon={<GitIcon width={32} height={32} />} />
             <ToolsInfo
               label="Postman"
               icon={<PostmanIcon width={32} height={32} />}
             />
+            <ToolsInfo label="AI" icon={<AiIcon width={32} height={32} />} />
+          </div>
+        </div>
+      </section>
+      <section className="w-full p-10 flex items-center">
+        <div className="container mx-auto w-full space-y-8">
+          <div className="xs:max-w-fit max-w-64 mx-auto text-4xl font-bold">
+            My <span className="text-green-500">Databases</span>
+          </div>
+          <div className="max-w-4xl mx-auto w-full flex flex-wrap gap-4 items-center justify-center">
             <ToolsInfo
-              label="Open AI"
-              icon={<OpenAiIcon width={32} height={32} />}
+              label="MySQL"
+              icon={<MySqlIcon width={32} height={32} />}
+            />
+            <ToolsInfo
+              label="PostgreSQL"
+              icon={<PostgreSqlIcon width={32} height={32} />}
+            />
+            <ToolsInfo
+              label="SQLite"
+              icon={<SqliteIcon width={32} height={32} />}
             />
           </div>
         </div>
