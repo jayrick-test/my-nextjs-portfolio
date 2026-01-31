@@ -13,7 +13,7 @@ const Projects: React.FC = () => {
               <TitlePage
                 title={
                   <div className="xs:max-w-fit max-w-64 mx-auto">
-                    My <span className="text-green-300">Projects</span>
+                    My <span className="text-green-500">Projects</span>
                   </div>
                 }
               />

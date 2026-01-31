@@ -44,15 +44,15 @@ export const Contact = () => {
             <TitlePage
               title={
                 <div className="xs:max-w-fit max-w-64 mx-auto">
-                  Contact <span className="text-green-300">Me</span>
+                  Contact <span className="text-green-500">Me</span>
                 </div>
               }
             />
           </div>
           <div className="flex lg:gap-4 gap-8 w-full lg:flex-row flex-col">
             <div className="w-full space-y-8">
-              <div className="font-semibold text-3xl border-b border-b-slate-400 w-fit border-dashed">
-                Get in <span className="text-green-300">Touch</span>
+              <div className="font-semibold text-3xl border-b border-b-slate-300 w-fit border-dashed">
+                Get in <span className="text-green-500">Touch</span>
               </div>
               <div className="space-y-4">
                 <div className="flex items-center gap-4 font-medium">
@@ -77,24 +77,24 @@ export const Contact = () => {
                 <input
                   placeholder="Full Name"
                   name="fullname"
-                  className="border border-slate-300 p-3 rounded-lg w-full block focus:outline-none focus:border-green-300 transition-colors duration-200"
+                  className="border border-slate-300 p-3 rounded-lg w-full block focus:outline-none focus:border-green-500 transition-colors duration-200"
                 />
                 <input
                   type="email"
                   placeholder="Email Address"
                   name="email"
-                  className="border border-slate-300 p-3 rounded-lg w-full block focus:outline-none focus:border-green-300 transition-colors duration-200"
+                  className="border border-slate-300 p-3 rounded-lg w-full block focus:outline-none focus:border-green-500 transition-colors duration-200"
                 />
                 <textarea
                   placeholder="Message"
                   name="message"
-                  className="border border-slate-300 p-3 rounded-lg resize-none w-full block focus:outline-none focus:border-green-300 transition-colors duration-200"
+                  className="border border-slate-300 p-3 rounded-lg resize-none w-full block focus:outline-none focus:border-green-500 transition-colors duration-200"
                   rows={8}
                 />
               </div>
               <button
                 type="submit"
-                className="w-fit m-auto block font-medium text-lg text-green-300 border border-green-300 rounded-full hover:bg-green-400 hover:text-white px-4 py-3 cursor-pointer transition-colors duration-200"
+                className="w-fit m-auto block font-medium text-lg text-green-500 border border-green-500 rounded-full hover:bg-green-400 hover:text-white hover:border-transparent px-4 py-3 cursor-pointer transition-colors duration-200"
               >
                 Send Message
               </button>

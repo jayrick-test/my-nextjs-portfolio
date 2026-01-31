@@ -46,7 +46,7 @@ const TopNavbar = () => {
           </Link>
           <div className="hidden md:block">
             <Link
-              className="bg-green-600 text-white rounded px-4 py-3 hover:bg-green-500 transition-colors duration-200"
+              className="bg-green-500 text-white rounded px-4 py-3 hover:bg-green-400 transition-colors duration-200"
               download={`mycv.pdf`}
               href={myCVPath}
             >
