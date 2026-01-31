@@ -49,7 +49,7 @@ export const Contact = () => {
               }
             />
           </div>
-          <div className="flex gap-4 w-full">
+          <div className="flex lg:gap-4 gap-8 w-full lg:flex-row flex-col">
             <div className="w-full space-y-8">
               <div className="font-semibold text-3xl border-b border-b-slate-400 w-fit border-dashed">
                 Get in <span className="text-green-300">Touch</span>
