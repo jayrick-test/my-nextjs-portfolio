@@ -23,28 +23,31 @@ const TopNavbar = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 w-full bg-white">
       <div className="shadow-lg py-12 px-10">
-        <div className="container mx-auto flex items-center justify-between">
-          <nav className="hidden md:flex items-center gap-6">
+        <div className="container mx-auto relative flex items-center justify-between">
+          <nav className="hidden lg:flex items-center gap-6">
             {TOP_NAV_LINKS.map((link) => (
               <Link
                 key={`desktop-top-nav-links-${link.href}`}
                 href={link.href}
-                className={`hover:text-green-300 hover:border-b hover:border-green-300 transition-all duration-75 ease-in-out ${
+                className={`hover:text-green-500 border-b hover:border-green-500 transition-all duration-75 ease-in-out ${
                   isActive(link.href)
-                    ? "text-green-300 border-b border-green-300"
-                    : "text-slate-500"
+                    ? "text-green-500 border-green-500"
+                    : "border-transparent"
                 }`}
               >
-                {link.label}
+                <span>{link.label}</span>
               </Link>
             ))}
           </nav>
-          <Link href="/" className="inline-block text-3xl font-bold">
+          <Link
+            href="/"
+            className="lg:absolute md:left-1/2 lg:-translate-x-1/2 text-3xl font-bold"
+          >
             <span>Jay</span>
             <span className="text-green-500">rick</span>
             <span className="text-blue-500">.</span>
           </Link>
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <Link
               className="bg-green-500 text-white rounded px-4 py-3 hover:bg-green-400 transition-colors duration-200"
               download={`mycv.pdf`}
@@ -55,7 +58,7 @@ const TopNavbar = () => {
           </div>
 
           <button
-            className="md:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1 cursor-pointer"
+            className="lg:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1 cursor-pointer"
             onClick={() => setIsOpen((prev) => !prev)}
           >
             <span

@@ -14,7 +14,7 @@ const Footer = () => {
             <span className="text-green-500">rick</span>
             <span className="text-blue-500">.</span>
           </div>
-          <span>All rights reserved.</span>
+          <span>All made with passion.</span>
         </div>
         <div className="flex flex-wrap gap-2.5 justify-end items-center w-auto">
           <FacebookIcon width={32} height={32} className="cursor-pointer" />
