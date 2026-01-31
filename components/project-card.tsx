@@ -29,7 +29,7 @@ const ProjectCard: React.FC<ProjectCardTypes> = ({
       </div>
       <div className="p-4 space-y-4">
         <h2 className="font-bold text-4xl">{title}</h2>
-        <p className="text-slate-00">{description}</p>
+        <p className="text-slate-600">{description}</p>
 
         <ul className="list-disc space-y-1.5 px-8 py-4">
           {doings.map((doing, index) => (
