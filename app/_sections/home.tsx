@@ -51,7 +51,6 @@ export const Home = () => {
                   <DownloadIcon width={24} height={24} />
                 </Link>
               </div>
-
               <div className="flex flex-wrap gap-2.5">
                 <FacebookIcon
                   width={32}

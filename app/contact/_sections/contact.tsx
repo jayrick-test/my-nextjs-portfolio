@@ -26,11 +26,10 @@ export const Contact = () => {
           },
         });
 
-        if (result.status === 200) {
-          formElement.reset();
-        }
+        if (result.status === 200) formElement.reset();
       } catch (error) {
         console.log(error);
+      } finally {
       }
     },
     [],
