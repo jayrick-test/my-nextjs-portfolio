@@ -56,23 +56,22 @@ const TopNavbar = () => {
               Download CV
             </Link>
           </div>
-
           <button
             className="lg:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1 cursor-pointer"
             onClick={() => setIsOpen((prev) => !prev)}
           >
             <span
-              className={`block h-0.5 w-6 bg-slate-700 transition-transform ${
+              className={`block h-0.5 w-6 bg-black transition-transform ${
                 isOpen ? "rotate-45 translate-y-1.5" : ""
               }`}
             />
             <span
-              className={`block h-0.5 w-6 bg-slate-700 transition-opacity ${
+              className={`block h-0.5 w-6 bg-black transition-opacity ${
                 isOpen ? "opacity-0" : ""
               }`}
             />
             <span
-              className={`block h-0.5 w-6 bg-slate-700 transition-transform ${
+              className={`block h-0.5 w-6 bg-black transition-transform ${
                 isOpen ? "-rotate-45 -translate-y-1.5" : ""
               }`}
             />
@@ -94,7 +93,7 @@ const TopNavbar = () => {
                     href={link.href}
                     onClick={() => setIsOpen(false)}
                     className={`hover:text-green-300 transition-all py-4 ${
-                      isActive(link.href) ? "text-green-300" : "text-slate-500"
+                      isActive(link.href) ? "text-green-300" : ""
                     }`}
                   >
                     {link.label}
@@ -102,7 +101,8 @@ const TopNavbar = () => {
                 ))}
 
                 <Link
-                  className="bg-green-300 text-white rounded p-2 hover:bg-green-400 transition-colors duration-200"
+                  role="button"
+                  className="bg-green-500 text-white rounded p-2 hover:bg-green-400 transition-colors duration-200"
                   download={`mycv.pdf`}
                   href={myCVPath}
                 >

@@ -42,6 +42,7 @@ export const Home = () => {
                   Feedback.
                 </p>
                 <Link
+                  role="button"
                   download={`mycv.pdf`}
                   href={myCVPath}
                   className="inline-flex gap-1 w-auto text-green-500 border border-green-500 rounded-full hover:bg-green-400 hover:text-white px-4 py-3 hover:border-transparent cursor-pointer transition-colors duration-200"
@@ -100,6 +101,7 @@ export const Home = () => {
             </div>
             <Link
               href="/about"
+              role="button"
               className="text-center w-fit m-auto block text-green-500 border border-green-500 rounded-full hover:bg-green-400 hover:text-white hover:border-transparent px-4 py-3 cursor-pointer transition-colors duration-200"
             >
               Read More
@@ -169,6 +171,7 @@ export const Home = () => {
             </div>
             <Link
               href="/contact"
+              role="button"
               className="text-center w-fit m-auto block text-green-500 border border-green-500 rounded-full hover:bg-green-500 hover:text-white hover:border-transparent px-4 py-3 cursor-pointer transition-colors duration-200"
             >
               Press Me Here
