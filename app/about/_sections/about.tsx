@@ -1,21 +1,20 @@
 "use client";
 
-import DetailsCard from "@/components/details-card";
+// import DetailsCard from "@/components/details-card";
 import TitlePage from "@/components/page-title";
 import { SkillsCard } from "@/components/skills-card";
 import { AiIcon } from "@/components/svg/ai-icon";
-import { BriefCaseIcon } from "@/components/svg/briefcase-icon";
-import { CodeIcon } from "@/components/svg/code-icon";
+// import { BriefCaseIcon } from "@/components/svg/briefcase-icon";
+// import { CodeIcon } from "@/components/svg/code-icon";
 import { GitIcon } from "@/components/svg/git-icon";
 import { MySqlIcon } from "@/components/svg/mysql-icon";
-import { OpenAiIcon } from "@/components/svg/openai-icon";
 import { PostgreSqlIcon } from "@/components/svg/postgresql-icon";
 import { PostmanIcon } from "@/components/svg/postman-icon";
 import { SqliteIcon } from "@/components/svg/sqlite-icon";
 import { VSCodeIcon } from "@/components/svg/vscode-icon";
 import { ToolsInfo } from "@/components/tools-info";
 
-const TECH_TOOLS = ["VSCode", "Postman", "Prisma Studio"];
+// const TECH_TOOLS = ["VSCode", "Postman", "Prisma Studio"];
 
 export const About = () => {
   return (
