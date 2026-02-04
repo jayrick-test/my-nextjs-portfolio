@@ -43,7 +43,7 @@ export const About = () => {
                 sunt in culpa qui officia deserunt mollit anim id est laborum.
               </p>
             </div>
-            <div className="flex flex-wrap items-stretch gap-4">
+            {/* <div className="flex flex-wrap items-stretch gap-4">
               <div className="shrink-1 w-auto">
                 <div className="h-64 bg-slate-300 w-[256px]" />
               </div>
@@ -67,7 +67,7 @@ export const About = () => {
                   data="Built 5+ Projects"
                 />
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
